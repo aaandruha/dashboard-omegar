@@ -1,3 +1,14 @@
+.actual-time__end {
+  background: #D8D8D8;
+  mix-blend-mode: normal;
+  opacity: 0.22;
+}
+
+.actual-time__label {
+  background: #F05252;
+  border-radius: 8px;
+}
+
 .b-button {
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 4px rgba(121, 139, 149, 0.440274);

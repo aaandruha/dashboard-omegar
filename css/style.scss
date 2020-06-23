@@ -4,10 +4,16 @@ $timestep:  85px;
 }
 .actual-time {
   &__end {
-  }
+    background: #D8D8D8;
+    mix-blend-mode: normal;
+    opacity: 0.22;
+   }
   &__label {
+    background: #F05252;
+    border-radius: 8px;
   }
   &__start {
+
   }
 }
 .b-button {
