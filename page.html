@@ -357,12 +357,6 @@
           // calculate the new cursor position:
           pos1 = e.clientX - pos3;
           let el = elmnt.parentNode.dataset.interval ;            
-          // pos3 = e.clientX;
-          //console.log("pos1 "+pos1, "pos3 "+pos3);
-          // set the element's new position:
-          //elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-          // elmnt.classList.add
-          //console.log(elmnt.dataset.period);
           if (pos1 >= 85) {
             elmnt.parentNode.dataset.interval = (!isNaN(el)? +el: 3) + 1;
             elmnt.parentNode.className = "event time" + elmnt.parentNode.dataset.period + " interval" + elmnt.parentNode.dataset.interval;
@@ -405,15 +399,7 @@
           ],
           pos1 = 0,
           pos3 = 0
-        // if (document.getElementById(elmnt.id + "header")) {
-        //   // if present, the header is where you move the DIV from:
-        //   document.getElementById(
-        //     elmnt.id + "header"
-        //   ).onmousedown = dragMouseDown;
-        // } else {
-          // otherwise, move the DIV from anywhere inside the DIV:
           elmnt.onmousedown = dragMouseDown;
-        // }
 
         function dragMouseDown(e) {
           e = e || window.event;
@@ -430,12 +416,6 @@
           e.preventDefault();
           // calculate the new cursor position:
           pos1 = e.clientX - pos3;
-          // pos3 = e.clientX;
-          //console.log("pos1 "+pos1, "pos3 "+pos3);
-          // set the element's new position:
-          //elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-          // elmnt.classList.add
-          //console.log(elmnt.dataset.period);
           if (pos1 >= 85) {
             var el = time_period.indexOf(elmnt.parentNode.dataset.period);
             elmnt.parentNode.dataset.period = time_period[el + 1];
