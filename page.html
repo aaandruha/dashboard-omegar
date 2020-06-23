@@ -200,9 +200,129 @@
               </div>
             </div>
           </div>
-          <div class="b-users__item"></div>
-          <div class="b-users__item"></div>
-          <div class="b-users__item"></div>
+          <div class="b-users__item">
+            <div class="master">
+              <div class="master__wrapper">
+                <div class="master__logo"><img src="image/master.png" /></div>
+                <div>
+                  <div class="master__name">Faadi Al Rahman</div>
+                  <div class="master__position">Specialist</div>
+                </div>
+              </div>
+              <div class="master__events">
+                <div class="event time0900 interval3" data-period="0900" data-interval="3">
+                  <div class="event__wrapper">
+                    <div class="event__time">9:00</div>
+                    <div class="event__price">$10</div>
+                    <div class="event__person">Song Bao</div>
+                    <div class="event__todo">Haircut standard</div>
+                  </div>
+                  <div class="event__resize">&nbsp;</div>
+                </div>
+                <div class="event time1100 interval4" data-period="1100" data-interval="4">
+                  <div class="event__wrapper">
+                    <div class="event__time">11:00</div>
+                    <div class="event__price">$13</div>
+                    <div class="event__person">Elston Gullan</div>
+                    <div class="event__todo">Haircut standard</div>
+                  </div>
+                  <div class="event__resize">&nbsp;</div>
+                </div>
+                <div class="event time1300 interval4" data-period="1300" data-interval="4">
+                  <div class="event__wrapper">
+                    <div class="event__time">13:00</div>
+                    <div class="event__price">$13</div>
+                    <div class="event__person">Marti Valencia</div>
+                    <div class="event__todo">Haircut standard</div>
+                  </div>
+                  <div class="event__resize">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="b-users__item">
+            <div class="master">
+              <div class="master__wrapper">
+                <div class="master__logo"><img src="image/master.png" /></div>
+                <div>
+                  <div class="master__name">Faadi Al Rahman</div>
+                  <div class="master__position">Specialist</div>
+                </div>
+              </div>
+              <div class="master__events">
+                <div class="event time0900 interval3" data-period="0900" data-interval="3">
+                  <div class="event__wrapper">
+                    <div class="event__time">9:00</div>
+                    <div class="event__price">$10</div>
+                    <div class="event__person">Song Bao</div>
+                    <div class="event__todo">Haircut standard</div>
+                  </div>
+                  <div class="event__resize">&nbsp;</div>
+                </div>
+                <div class="event time1100 interval4" data-period="1100" data-interval="4">
+                  <div class="event__wrapper">
+                    <div class="event__time">11:00</div>
+                    <div class="event__price">$13</div>
+                    <div class="event__person">Elston Gullan</div>
+                    <div class="event__todo">Haircut standard</div>
+                  </div>
+                  <div class="event__resize">&nbsp;</div>
+                </div>
+                <div class="event time1300 interval4" data-period="1300" data-interval="4">
+                  <div class="event__wrapper">
+                    <div class="event__time">13:00</div>
+                    <div class="event__price">$13</div>
+                    <div class="event__person">Marti Valencia</div>
+                    <div class="event__todo">Haircut standard</div>
+                  </div>
+                  <div class="event__resize">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="b-users__item">
+            <div class="master">
+              <div class="master__wrapper">
+                <div class="master__logo"><img src="image/master.png" /></div>
+                <div>
+                  <div class="master__name">Faadi Al Rahman</div>
+                  <div class="master__position">Specialist</div>
+                </div>
+              </div>
+              <div class="master__events">
+                <div class="event time0900 interval3" data-period="0900" data-interval="3">
+                  <div class="event__wrapper">
+                    <div class="event__time">9:00</div>
+                    <div class="event__price">$10</div>
+                    <div class="event__person">Song Bao</div>
+                    <div class="event__todo">Haircut standard</div>
+                  </div>
+                  <div class="event__resize">&nbsp;</div>
+                </div>
+                <div class="event time1100 interval4" data-period="1100" data-interval="4">
+                  <div class="event__wrapper">
+                    <div class="event__time">11:00</div>
+                    <div class="event__price">$13</div>
+                    <div class="event__person">Elston Gullan</div>
+                    <div class="event__todo">Haircut standard</div>
+                  </div>
+                  <div class="event__resize">&nbsp;</div>
+                </div>
+                <div class="event time1300 interval4" data-period="1300" data-interval="4">
+                  <div class="event__wrapper">
+                    <div class="event__time">13:00</div>
+                    <div class="event__price">$13</div>
+                    <div class="event__person">Marti Valencia</div>
+                    <div class="event__todo">Haircut standard</div>
+                  </div>
+                  <div class="event__resize">&nbsp;</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
           <div class="b-users__item"></div>
           <div class="b-users__item"></div>
           <div class="b-users__item"></div>
@@ -218,10 +338,8 @@
       
       function resizeElement(elmnt) {
         let pos1 = 0,
-            pos3 = 0,
-            cur = elmnt.parentNode.style.cursor
+            pos3 = 0;
         elmnt.onmousedown = resizeMouseDown;
-        document.body.style.cursor = 'col-resize';
 
         function resizeMouseDown(e) {
           e = e || window.event;
@@ -261,7 +379,6 @@
           // stop moving when mouse button is released:
           document.onmouseup = null;
           document.onmousemove = null;
-          elmnt.parentNode.style.cursor = cur;
         }
       }
 
