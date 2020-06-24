@@ -155,7 +155,7 @@
           </div>
           <div class="actual-time">
             <div class="actual-time__start"></div>
-            <div class="actual-time__label"></div>
+            <div class="actual-time__label">12:45</div>
             <div class="actual-time__end"></div>
           </div>
         </div>
@@ -436,6 +436,19 @@
           document.onmousemove = null;
         }
       }
+
+        let w = 100;
+          function bigger() {
+              if (w < 1000) 
+              {
+                  w = w+5;
+                  document.querySelector('.actual-time').style.width = w + 'px';            
+              } else {
+                clearInterval(int);
+            }
+          }
+          let int = setInterval(bigger, 10000);
+
     </script>
   </body>
 </html>

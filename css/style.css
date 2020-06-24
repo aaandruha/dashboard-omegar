@@ -1,3 +1,26 @@
+.actual-time {
+  position: absolute;
+  top: 0px;
+  border-right: 1px solid #f05252;
+}
+
+.actual-time__label {
+  background: #f05252;
+  border-radius: 8px;
+  position: absolute;
+  padding: 1px 3px;
+  top: -20px;
+  left: 381px;
+}
+
+.actual-time__start {
+  background: #d8d8d8;
+  mix-blend-mode: normal;
+  opacity: 0.22;
+  height: 500px;
+  width: 400px;
+}
+
 .b-button {
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 4px rgba(121, 139, 149, 0.440274);
@@ -271,6 +294,7 @@
   font-size: 13px;
   line-height: 15px;
   text-align: center;
+  padding-top: 10px;
   color: #000000;
 }
 
