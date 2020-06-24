@@ -211,18 +211,14 @@
     </div>
 
     <script>
-      .
+      
       dragElement(document.querySelector(".event .event__wrapper"));
-      resizeElement(document.querySelector(".event .event_resize");
+      //resizeElement(document.querySelector(".event .event_resize"));
 
       function resizeElement(elmnt, nameResize) {
         var pos1 = 0,
           pos3 = 0
-        if (elmnt.querySelector(nameResize)) {
-          document.querySelector(nameResize).onmousedown = resizeMouseDown;
-        } else {
-          elmnt.onmousedown = resizeMouseDown;
-        }
+        elmnt.onmousedown = resizeMouseDown;
 
         function resizeMouseDown(e) {
           e = e || window.event;
@@ -341,6 +337,19 @@
           document.onmousemove = null;
         }
       }
+
+        let w = 100;
+          function bigger() {
+              if (w < 1000) 
+              {
+                  w = w+5;
+                  document.querySelector('.actual-time').style.width = w + 'px';            
+              } else {
+                clearInterval(int);
+            }
+          }
+          let int = setInterval(bigger, 10000);
+
     </script>
   </body>
 </html>

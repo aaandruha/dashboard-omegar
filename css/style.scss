@@ -1,19 +1,28 @@
-$timestep:  85px;
+$timestep: 85px;
 
 .active {
 }
+
 .actual-time {
+  position: absolute;
+  top: 0px;
+  border-right: 1px solid #f05252;
   &__end {
-    background: #D8D8D8;
-    mix-blend-mode: normal;
-    opacity: 0.22;
-   }
+  }
   &__label {
-    background: #F05252;
+    background: #f05252;
     border-radius: 8px;
+    position: absolute;
+    padding: 1px 3px;
+    top: -20px;
+    left: 381px;
   }
   &__start {
-
+    background: #d8d8d8;
+    mix-blend-mode: normal;
+    opacity: 0.22;
+    height: 500px;
+    width: 400px;
   }
 }
 .b-button {
@@ -246,7 +255,7 @@ $timestep:  85px;
     font-size: 13px;
     line-height: 15px;
     text-align: center;
-
+    padding-top: 10px;
     color: #000000;
   }
   &__start {
@@ -326,98 +335,98 @@ $timestep:  85px;
   }
 }
 .time0900 {
- left: $timestep*0
+  left: $timestep * 0;
 }
 
 .time0930 {
-  left: $timestep*1
+  left: $timestep * 1;
 }
 
 .time1000 {
-  left: $timestep*2
+  left: $timestep * 2;
 }
 
 .time1030 {
-  left: $timestep*3
+  left: $timestep * 3;
 }
 
 .time1100 {
-  left: $timestep*4
+  left: $timestep * 4;
 }
 
 .time1130 {
-  left: $timestep*5
+  left: $timestep * 5;
 }
 
 .time1200 {
-  left: $timestep*6
+  left: $timestep * 6;
 }
 
 .time1230 {
-  left: $timestep*7
+  left: $timestep * 7;
 }
 
 .time1300 {
-  left: $timestep*8
+  left: $timestep * 8;
 }
 
 .time1330 {
-  left: $timestep*9
+  left: $timestep * 9;
 }
 
 .time1400 {
-  left: $timestep*10
+  left: $timestep * 10;
 }
 
 .time1430 {
-  left: $timestep*11
+  left: $timestep * 11;
 }
 
 .time1500 {
-  left: $timestep*12
+  left: $timestep * 12;
 }
 
 .time1530 {
-  left: $timestep*13
+  left: $timestep * 13;
 }
 
 .time1600 {
-  left: $timestep*14
+  left: $timestep * 14;
 }
 
 .time1630 {
-  left: $timestep*15
+  left: $timestep * 15;
 }
 
 .time1700 {
-  left: $timestep*16
+  left: $timestep * 16;
 }
 
 .time1730 {
-  left: $timestep*17
+  left: $timestep * 17;
 }
 
 .interval1 {
-  width: $timestep*1-8;
+  width: $timestep * 1-8;
 }
 .interval2 {
-  width: $timestep*2-8;
+  width: $timestep * 2-8;
 }
 .interval3 {
-  width: $timestep*3-8;
+  width: $timestep * 3-8;
 }
 .interval4 {
-  width: $timestep*4-8;
+  width: $timestep * 4-8;
 }
 .interval5 {
-  width: $timestep*5-8;
+  width: $timestep * 5-8;
 }
 .interval6 {
-  width: $timestep*6-8;
+  width: $timestep * 6-8;
 }
 .interval7 {
-  width: $timestep*7-8;
+  width: $timestep * 7-8;
 }
 .interval8 {
-  width: $timestep*8-8;
+  width: $timestep * 8-8;
 }
