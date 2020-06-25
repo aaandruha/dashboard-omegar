@@ -437,17 +437,28 @@
         }
       }
 
-        let w = 100;
+      let today = new Date(),
+              h = today.getHours(),
+              m = today.getMinutes();
+        let w = ( h>8 ? (h-9)*85*2 : 0 ) + ( m*3 );
           function bigger() {
+
               if (w < 1000) 
-              {
-                  w = w+5;
-                  document.querySelector('.actual-time').style.width = w + 'px';            
+              {                  
+                  w = w+3;
+                  document.querySelector('.actual-time__start').style.width = w + 'px'; 
+                  document.querySelector('.actual-time__label').style.left = (w-15) + 'px';  
+                  document.querySelector('.actual-time__label').innerHTML = (h) + ':' + m;  
+                  document.querySelector('.actual-time').style.width = w + 'px';                             
+                  today = new Date()
+                  h = today.getHours()
+                  m = today.getMinutes()                  
               } else {
                 clearInterval(int);
             }
           }
-          let int = setInterval(bigger, 10000);
+          bigger();
+          let int = setInterval(bigger, 60000);
 
     </script>
   </body>
