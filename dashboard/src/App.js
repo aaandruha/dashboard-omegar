@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Content />
+      <Content dateStart={'29.06.2020'}/>
     </div>
   );
 }

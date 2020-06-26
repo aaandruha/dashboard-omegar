@@ -7,7 +7,7 @@ const Content = (props) => {
     return (
         <div>
             <Buttonsbar />
-            <Timebarheader />
+            <Timebarheader dateStart={props.dateStart}/>
             <Timeline />
         </div>
         )

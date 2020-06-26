@@ -1,231 +1,132 @@
 import React from 'react'
 
+import Workday from './workday/workday'
+import Actualtime from './actualtime/actualtime'
+import Masterlist from './masterlist/masterlist'
+
+
+const state = {
+  masters: [
+     {
+      name: "Faadi Al Rahman",
+      photo: "image/master1.png",
+      position: "Specialist",
+      clients: [
+        {
+          client: 'Song Bao',
+          time: '9:00',
+          duration: 3, // half hour
+          price: 10             ,
+          proc: 'Haircut standart',
+          status: 2 // 1 - create, 2 - apply, 3 - cancel, 4 - not come
+        },
+        {
+          client: 'Marti Valencia',
+          time: '11:00',
+          duration: 4, // half hour
+          price: 13,
+          proc: 'Haircut standart',
+          status: 1 // 1 - create, 2 - apply, 3 - cancel, 4 - not come
+        },
+        {
+          client: 'Elston Gullan',
+          time: '13:00',
+          duration: 4, // half hour
+          price: 13,
+          proc: 'Haircut standart',
+          status: 1 // 1 - create, 2 - apply, 3 - cancel, 4 - not come
+        }
+      ]
+    },
+    {
+      name: "Loni Bowcher",
+      photo: "master2.png",
+      position: "Specialist",
+      clients: [
+        {
+          client: 'Chioke Okonkwo',
+          time: '10:00',
+          duration: 4, // half hour
+          price: 13,
+          proc: 'Haircut standart',
+          status: 4 // 1 - create, 2 - apply, 3 - cancel, 4 - not come
+        },
+        {
+          client: 'Marti Valencia',
+          time: '14:00',
+          duration: 4, // half hour
+          price: 13,       
+          proc: 'Haircut standart',
+          status: 1 // 1 - create, 2 - apply, 3 - cancel, 4 - not come
+        },
+      ]
+    },
+    {
+      name: "Miriam Jesus",
+      photo: "master3.png",
+      position: "Specialist",
+      clients: [
+        {
+          client: 'Mkhuseli Malinga',
+          time: '9:30',
+          duration: 3, // half hour
+          price: 12             ,
+          proc: 'Applying varnish',
+          status: 2 // 1 - create, 2 - apply, 3 - cancel, 4 - not come
+        },
+        {
+          client: 'Joslin Rodgers',
+          time: '12:30',
+          duration: 4, // half hour
+          price: 13,
+          proc: 'Applying varnish',
+          status: 1 // 1 - create, 2 - apply, 3 - cancel, 4 - not come
+        },
+        {
+          client: 'Charles Davies',
+          time: '15:00',
+          duration: 3, // half hour
+          price: 13,
+          proc: 'Applying varnish',
+          status: 1 // 1 - create, 2 - apply, 3 - cancel, 4 - not come
+        }
+      ]
+    },
+    {
+      name: "Rustem Tolstobrov",
+      photo: "master4.png",
+      position: "Specialist",
+      clients: [
+        {
+          client: 'Afonso Pinto',
+          time: '9:00',
+          duration: 3, // half hour
+          price: 10,
+          proc: 'Applying varnish',
+          status: 2 // 1 - create, 2 - apply, 3 - cancel, 4 - not come
+        },
+        {
+          client: 'Joslin Rodgers',
+          time: '12:00',
+          duration: 4, // half hour
+          price: 13,       
+          proc: 'Applying varnish',
+          status: 1 // 1 - create, 2 - apply, 3 - cancel, 4 - not come
+        },
+      ]
+    } 
+  ]
+}
+
 const Timeline = (props) => {
     return (
         <div className="main-page__line">
         <div className="timeline__wrapper">
           <div className="b-timeline padding283">
-            <div className="b-timeline__items">
-              <div className="b-houre">
-                <div className="houre__start"></div>
-                <div className="houre__label">9:00</div>
-                <div className="houre__end"></div>
-              </div>
-              <div className="b-houre">
-                <div className="houre__start"></div>
-                <div className="houre__label">10:00</div>
-                <div className="houre__end"></div>
-              </div>
-              <div className="b-houre">
-                <div className="houre__start"></div>
-                <div className="houre__label">11:00</div>
-                <div className="houre__end"></div>
-              </div>
-              <div className="b-houre">
-                <div className="houre__start"></div>
-                <div className="houre__label">12:00</div>
-                <div className="houre__end"></div>
-              </div>
-              <div className="b-houre">
-                <div className="houre__start"></div>
-                <div className="houre__label">13:00</div>
-                <div className="houre__end"></div>
-              </div>
-              <div className="b-houre">
-                <div className="houre__start"></div>
-                <div className="houre__label">14:00</div>
-                <div className="houre__end"></div>
-              </div>
-              <div className="b-houre">
-                <div className="houre__start"></div>
-                <div className="houre__label">15:00</div>
-                <div className="houre__end"></div>
-              </div>
-              <div className="b-houre">
-                <div className="houre__start"></div>
-                <div className="houre__label">16:00</div>
-                <div className="houre__end"></div>
-              </div>
-              <div className="b-houre">
-                <div className="houre__start"></div>
-                <div className="houre__label">17:00</div>
-                <div className="houre__end"></div>
-              </div>
-            </div>
-            <div className="actual-time">
-              <div className="actual-time__start"></div>
-              <div className="actual-time__label">12:45</div>
-              <div className="actual-time__end"></div>
-            </div>
+              <Workday />
+              <Actualtime />
           </div>
-          <div className="b-users">
-            <div className="b-users__item">
-              <div className="master">
-                <div className="master__wrapper">
-                  <div className="master__logo"><img src="image/master.png" /></div>
-                  <div>
-                    <div className="master__name">Faadi Al Rahman</div>
-                    <div className="master__position">Specialist</div>
-                  </div>
-                </div>
-                <div className="master__events">
-                  <div className="event time0900 interval3" data-period="0900" data-interval="3">
-                    <div className="event__wrapper">
-                      <div className="event__time">9:00</div>
-                      <div className="event__price">$10</div>
-                      <div className="event__person">Song Bao</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                  <div className="event time1100 interval4" data-period="1100" data-interval="4">
-                    <div className="event__wrapper">
-                      <div className="event__time">11:00</div>
-                      <div className="event__price">$13</div>
-                      <div className="event__person">Elston Gullan</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                  <div className="event time1300 interval4" data-period="1300" data-interval="4">
-                    <div className="event__wrapper">
-                      <div className="event__time">13:00</div>
-                      <div className="event__price">$13</div>
-                      <div className="event__person">Marti Valencia</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="b-users__item">
-              <div className="master">
-                <div className="master__wrapper">
-                  <div className="master__logo"><img src="image/master.png" /></div>
-                  <div>
-                    <div className="master__name">Faadi Al Rahman</div>
-                    <div className="master__position">Specialist</div>
-                  </div>
-                </div>
-                <div className="master__events">
-                  <div className="event time0900 interval3" data-period="0900" data-interval="3">
-                    <div className="event__wrapper">
-                      <div className="event__time">9:00</div>
-                      <div className="event__price">$10</div>
-                      <div className="event__person">Song Bao</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                  <div className="event time1100 interval4" data-period="1100" data-interval="4">
-                    <div className="event__wrapper">
-                      <div className="event__time">11:00</div>
-                      <div className="event__price">$13</div>
-                      <div className="event__person">Elston Gullan</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                  <div className="event time1300 interval4" data-period="1300" data-interval="4">
-                    <div className="event__wrapper">
-                      <div className="event__time">13:00</div>
-                      <div className="event__price">$13</div>
-                      <div className="event__person">Marti Valencia</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-            <div className="b-users__item">
-              <div className="master">
-                <div className="master__wrapper">
-                  <div className="master__logo"><img src="image/master.png" /></div>
-                  <div>
-                    <div className="master__name">Faadi Al Rahman</div>
-                    <div className="master__position">Specialist</div>
-                  </div>
-                </div>
-                <div className="master__events">
-                  <div className="event time0900 interval3" data-period="0900" data-interval="3">
-                    <div className="event__wrapper">
-                      <div className="event__time">9:00</div>
-                      <div className="event__price">$10</div>
-                      <div className="event__person">Song Bao</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                  <div className="event time1100 interval4" data-period="1100" data-interval="4">
-                    <div className="event__wrapper">
-                      <div className="event__time">11:00</div>
-                      <div className="event__price">$13</div>
-                      <div className="event__person">Elston Gullan</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                  <div className="event time1300 interval4" data-period="1300" data-interval="4">
-                    <div className="event__wrapper">
-                      <div className="event__time">13:00</div>
-                      <div className="event__price">$13</div>
-                      <div className="event__person">Marti Valencia</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-            <div className="b-users__item">
-              <div className="master">
-                <div className="master__wrapper">
-                  <div className="master__logo"><img src="image/master.png" /></div>
-                  <div>
-                    <div className="master__name">Faadi Al Rahman</div>
-                    <div className="master__position">Specialist</div>
-                  </div>
-                </div>
-                <div className="master__events">
-                  <div className="event time0900 interval3" data-period="0900" data-interval="3">
-                    <div className="event__wrapper">
-                      <div className="event__time">9:00</div>
-                      <div className="event__price">$10</div>
-                      <div className="event__person">Song Bao</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                  <div className="event time1100 interval4" data-period="1100" data-interval="4">
-                    <div className="event__wrapper">
-                      <div className="event__time">11:00</div>
-                      <div className="event__price">$13</div>
-                      <div className="event__person">Elston Gullan</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                  <div className="event time1300 interval4" data-period="1300" data-interval="4">
-                    <div className="event__wrapper">
-                      <div className="event__time">13:00</div>
-                      <div className="event__price">$13</div>
-                      <div className="event__person">Marti Valencia</div>
-                      <div className="event__todo">Haircut standard</div>
-                    </div>
-                    <div className="event__resize">&nbsp;</div>
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-            <div className="b-users__item"></div>
-            <div className="b-users__item"></div>
-            <div className="b-users__item"></div>
-          </div>
+          <Masterlist list={state} />
         </div>
       </div>
         )

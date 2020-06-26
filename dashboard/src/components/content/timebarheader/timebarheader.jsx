@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Timebarheader = () => {
+const Timebarheader = (props) => {
     return (
         <div className="main-page__line">
         <div className="line__wrapper">
